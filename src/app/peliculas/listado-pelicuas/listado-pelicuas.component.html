@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let peliculas of peliculas">
+    <p> pelicula: {{peliculas.titulo}}</p>
+    <br>
+    <p> Fecha de lanzamiento: {{peliculas.fechaLanzamiento | date:"dd/MM/yyyy"}}</p>
+    <br>
+    <p> Precio: {{peliculas.precio}}</p>
+  </div>
+</div>
