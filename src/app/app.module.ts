@@ -6,18 +6,27 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListadoPelicuasComponent } from './peliculas/listado-pelicuas/listado-pelicuas.component';
 import { MaterialModule } from './material/material.module';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MenuComponent } from './menu/menu.component';
+import { LsiatdoGenericoComponent } from './utilidades/lsiatdo-generico/lsiatdo-generico.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListadoPelicuasComponent
+    ListadoPelicuasComponent,
+    MenuComponent,
+    LsiatdoGenericoComponent
 
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatToolbarModule
 
   ],
   providers: [],
