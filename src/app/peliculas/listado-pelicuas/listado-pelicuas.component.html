@@ -1,9 +1,15 @@
+<app-lsiatdo-generico [listado]="peliculas">
+<ng-container contenido>
+
 <div>
-  <div *ngFor="let peliculas of peliculas">
-    <p> pelicula: {{peliculas.titulo}}</p>
+  <div *ngFor="let peliculas of peliculas; let index= index">
+    <p> pelicula: {{index}} {{peliculas.titulo}} <button style="margin-left:1rem" (click)="remover(index)">remover</button></p>
     <br>
     <p> Fecha de lanzamiento: {{peliculas.fechaLanzamiento | date:"dd/MM/yyyy"}}</p>
     <br>
     <p> Precio: {{peliculas.precio}}</p>
   </div>
 </div>
+
+</ng-container>
+</app-lsiatdo-generico>

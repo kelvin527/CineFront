@@ -5,13 +5,15 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './listado-pelicuas.component.html',
   styleUrls: ['./listado-pelicuas.component.css']
 })
-export class ListadoPelicuasComponent implements OnInit {
+export class ListadoPelicuasComponent {
 
   constructor() { }
   @Input()
  peliculas:any;
-  ngOnInit(): void {
 
-  }
+ remover(pelindes:number):void{
+  this.peliculas.splice(pelindes,1)
+ }
+
 
 }
