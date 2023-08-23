@@ -13,8 +13,11 @@ import {MatButtonModule} from '@angular/material/button';
   ],
   exports:[
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
-  declarations: []
+  declarations: [
+
+  ]
 })
 export class MaterialModule { }

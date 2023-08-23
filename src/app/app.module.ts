@@ -10,7 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MenuComponent } from './menu/menu.component';
-import { LsiatdoGenericoComponent } from './utilidades/lsiatdo-generico/lsiatdo-generico.component';
+import { LsiatdoGenericoComponent } from './listado-generico/listatdo-generico.component';
+import { RatingComponent } from './utilidades/rating/rating.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { LsiatdoGenericoComponent } from './utilidades/lsiatdo-generico/lsiatdo-
     AppComponent,
     ListadoPelicuasComponent,
     MenuComponent,
-    LsiatdoGenericoComponent
+    LsiatdoGenericoComponent,
+    RatingComponent
 
    ],
   imports: [

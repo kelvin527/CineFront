@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-lsiatdo-generico',
-  templateUrl: './lsiatdo-generico.component.html',
-  styleUrls: ['./lsiatdo-generico.component.css']
+  selector: 'app-listado-generico',
+  templateUrl: './listado-generico.component.html',
+  styleUrls: ['./listado-generico.component.css']
 })
 export class LsiatdoGenericoComponent  {
 

@@ -43,7 +43,9 @@ export class AppComponent implements OnInit {
     })
   }
 
-
+  voto(index:number):void{
+    alert(index)
+  }
   title = 'Cine';
   peliculasEnCines:any;
   peliculas:any;
