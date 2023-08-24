@@ -14,11 +14,12 @@ import { LsiatdoGenericoComponent } from './listado-generico/listatdo-generico.c
 import { RatingComponent } from './utilidades/rating/rating.component';
 import { LandingPageComponent } from './landingPage/landingPage.component';
 import { GenerosComponent } from './generos/generos.component';
-import { CrearGenerosComponent } from './generos/crear-generos/crear-generos.component';
+import { CrearGenerosComponent } from './crear-generos/crear-generos.component';
+import { CinesComponent } from './cines/cines.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     ListadoPelicuasComponent,
     MenuComponent,
@@ -26,8 +27,8 @@ import { CrearGenerosComponent } from './generos/crear-generos/crear-generos.com
     RatingComponent,
       LandingPageComponent,
       GenerosComponent,
-      CrearGenerosComponent
-
+      CrearGenerosComponent,
+      CinesComponent
    ],
   imports: [
     BrowserModule,
