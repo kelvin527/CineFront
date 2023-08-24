@@ -12,6 +12,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MenuComponent } from './menu/menu.component';
 import { LsiatdoGenericoComponent } from './listado-generico/listatdo-generico.component';
 import { RatingComponent } from './utilidades/rating/rating.component';
+import { LandingPageComponent } from './landingPage/landingPage.component';
+import { GenerosComponent } from './generos/generos.component';
+import { CrearGenerosComponent } from './generos/crear-generos/crear-generos.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { RatingComponent } from './utilidades/rating/rating.component';
     ListadoPelicuasComponent,
     MenuComponent,
     LsiatdoGenericoComponent,
-    RatingComponent
+    RatingComponent,
+      LandingPageComponent,
+      GenerosComponent,
+      CrearGenerosComponent
 
    ],
   imports: [
