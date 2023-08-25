@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListadoPelicuasComponent } from './peliculas/listado-pelicuas/listado-pelicuas.component';
 import { MaterialModule } from './material/material.module';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MenuComponent } from './menu/menu.component';
 import { LsiatdoGenericoComponent } from './listado-generico/listatdo-generico.component';
@@ -19,7 +18,7 @@ import { CinesComponent } from './cines/cines.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     ListadoPelicuasComponent,
     MenuComponent,
@@ -35,7 +34,8 @@ import { CinesComponent } from './cines/cines.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

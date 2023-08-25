@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import {  Router } from '@angular/router';
 
 @Component({
@@ -6,9 +7,16 @@ import {  Router } from '@angular/router';
   templateUrl: './crear-generos.component.html',
   styleUrls: ['./crear-generos.component.css']
 })
-export class CrearGenerosComponent {
+export class CrearGenerosComponent implements OnInit {
 
-constructor(private router:Router){}
+constructor(private router:Router,private formBuilder:FormBuilder){}
+form:FormGroup;
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      nombre:""
+    })
+  }
+
   guardar(){
     this.router.navigate(['/generos']);
 
