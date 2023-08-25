@@ -4,7 +4,11 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 import { MenuComponent } from '../menu/menu.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-//import {MatToolbarModule} from '@angular/material/toolbar';
+/*MatFormFieldModule y MatInputModule sirven para trabajar lo visual
+en el formulario, esto viene de angular material*/
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input'
+
 
 @NgModule({
   imports: [
@@ -14,7 +18,9 @@ import {MatButtonModule} from '@angular/material/button';
   exports:[
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   declarations: [
 

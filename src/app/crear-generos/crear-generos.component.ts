@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
+import { primeraLetra } from '../utilidades/validaciones/primeraLetraMayuscula';
 
 @Component({
   selector: 'app-crear-generos',
@@ -13,7 +14,10 @@ constructor(private router:Router,private formBuilder:FormBuilder){}
 form:FormGroup;
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      nombre:""
+      nombre:['',{
+        validators:[Validators.required,Validators.minLength(4),
+         primeraLetra()]
+      }]
     })
   }
 
@@ -21,4 +25,18 @@ form:FormGroup;
     this.router.navigate(['/generos']);
 
   }
+
+  obtenerErrores(){
+    var campo = this.form.get('nombre');//esto es pra obtener los campo del formulario
+    if (campo.hasError('required')) {//esto comprueba si tiene el de validacion del campo y si lo tiene retorna el mensaje
+      return "El Nombre es obligatorio";
+  }
+    if(campo.hasError('minLength'))
+    {return "nohjrtjrj"; }
+
+    if(campo.hasError('primeraLetra')){
+      return campo.getError('primeraLetra').mensaje
+    }
+  return '';
+}
 }
