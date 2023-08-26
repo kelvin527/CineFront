@@ -15,6 +15,9 @@ import { LandingPageComponent } from './landingPage/landingPage.component';
 import { GenerosComponent } from './generos/generos.component';
 import { CrearGenerosComponent } from './crear-generos/crear-generos.component';
 import { CinesComponent } from './cines/cines.component';
+import { FormularioGenerosComponent } from './generos/formulario-generos/formulario-generos.component';
+import { EditarCinesComponent } from './cines/editar-cines/editar-cines.component';
+import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { CinesComponent } from './cines/cines.component';
       LandingPageComponent,
       GenerosComponent,
       CrearGenerosComponent,
-      CinesComponent
+      CinesComponent,
+      FormularioGenerosComponent,
+    EditarGeneroComponent,
+    EditarCinesComponent
    ],
   imports: [
     BrowserModule,

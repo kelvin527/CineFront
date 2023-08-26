@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { generoCreacionDto } from '../interfaces/genero.interface';
 
 @Component({
   selector: 'app-editar-genero',
@@ -8,12 +9,22 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditarGeneroComponent implements OnInit {
 
-  constructor(private activeRoute:ActivatedRoute) { }
+  constructor(private activeRoute:ActivatedRoute, private router: Router) { }
+
+  modelo:generoCreacionDto={
+    nombre:'drama'
+  }
+
 
   ngOnInit() {
     this.activeRoute.params.subscribe(params =>{
-      alert(params.id)
+      console.log(params.id)
     })
   }
 
+  guardar(genero:generoCreacionDto){
+    console.log(genero)
+    this.router.navigate(['/generos']);
+
+  }
 }
