@@ -1,20 +1,24 @@
-import { AbstractControl, ValidatorFn } from "@angular/forms";
-import { ignoreElements } from "rxjs"
+import { AbstractControl, ValidatorFn } from '@angular/forms';
 
-export function primeraLetra():ValidatorFn{
-  return (control:AbstractControl) =>{
-    const valor = <string>control.value;
-    if(!valor) return'';
-    if(valor.length === 0) return''
+export function primeraLetraMayuscula(): ValidatorFn {
+  return (control: AbstractControl) => {
+    const valor = control.value as string;
 
-    const primera = valor[0]
-    if(primera !== primera.toUpperCase())
-      return{
-        primeraLetra:{
-          mensaje: 'La primera letra tiene que ser mayuscula'
-        }
-
+    if (!valor) {
+      return null;
     }
-    return'';
-  }
+    if (valor.length === 0) {
+      return null;
+    }
+
+    const primeraLetra = valor[0];
+    if (primeraLetra !== primeraLetra.toUpperCase()) {
+      return {
+        primeraLetraMayuscula: {
+          mensaje: 'La primera letra debe ser mayuscula',
+        },
+      };
+    }
+    return null;
+  };
 }

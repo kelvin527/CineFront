@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
-import { primeraLetra } from '../utilidades/validaciones/primeraLetraMayuscula';
+import {  primeraLetraMayuscula } from '../utilidades/validaciones/primeraLetraMayuscula';
 
 @Component({
   selector: 'app-crear-generos',
@@ -16,7 +16,7 @@ form:FormGroup;
     this.form = this.formBuilder.group({
       nombre:['',{
         validators:[Validators.required,Validators.minLength(4),
-         primeraLetra()]
+          primeraLetraMayuscula()]
       }]
     })
   }
@@ -34,8 +34,8 @@ form:FormGroup;
     if(campo.hasError('minLength'))
     {return "nohjrtjrj"; }
 
-    if(campo.hasError('primeraLetra')){
-      return campo.getError('primeraLetra').mensaje
+    if(campo.hasError('primeraLetraMayuscula')){
+      return campo.getError('primeraLetraMayuscula').mensaje
     }
   return '';
 }
