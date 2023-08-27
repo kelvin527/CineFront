@@ -10,6 +10,7 @@ import { CinesComponent } from './cines/cines.component';
 import { CrearPeliculaComponent } from './crear-pelicula/crear-pelicula.component';
 import { EditarCinesComponent } from './cines/editar-cines/editar-cines.component';
 import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
+import { FiltroPeliculaComponent } from './filtroPelicula/filtroPelicula.component';
 
 const routes: Routes = [
   {path:'', component:LandingPageComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'cines/editar/:id', component:EditarCinesComponent},
 
   {path:'peliculas/crear', component:CrearPeliculaComponent},
+  {path:'peliculas/buscar', component:FiltroPeliculaComponent},
 
   {path:'**',redirectTo:''} /*esto se llama willcard, y sirve para atrapar
  todos los errores que el usuario haga en la ruta del navegador */

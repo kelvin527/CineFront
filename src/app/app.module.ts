@@ -18,6 +18,7 @@ import { CinesComponent } from './cines/cines.component';
 import { FormularioGenerosComponent } from './generos/formulario-generos/formulario-generos.component';
 import { EditarCinesComponent } from './cines/editar-cines/editar-cines.component';
 import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
+import { FiltroPeliculaComponent } from './filtroPelicula/filtroPelicula.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.com
       CinesComponent,
       FormularioGenerosComponent,
     EditarGeneroComponent,
-    EditarCinesComponent
+    EditarCinesComponent,
+    FiltroPeliculaComponent
    ],
   imports: [
     BrowserModule,

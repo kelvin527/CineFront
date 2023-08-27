@@ -7,7 +7,11 @@ import {MatButtonModule} from '@angular/material/button';
 /*MatFormFieldModule y MatInputModule sirven para trabajar lo visual
 en el formulario, esto viene de angular material*/
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
 
 
 @NgModule({
@@ -20,7 +24,9 @@ import {MatInputModule} from '@angular/material/input'
     MatIconModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatCheckboxModule
   ],
   declarations: [
 
