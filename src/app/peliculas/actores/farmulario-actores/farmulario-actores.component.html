@@ -1,0 +1,19 @@
+<form (submit)="onSubmit" formControlName="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input formControlName="nombre" matInput>
+    <mat-error>El campo nombre es requirido</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label >Fecha de nacimiento</mat-label>
+    <input formControlName="fechaNacimiento" matInput [matDatepicker]="picker"/>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" [disabled]="form.invalid">
+    Guardad cambios
+  </button>
+  <a mat-stroked-button routerLink="/actores">Cancelar</a>
+</form>

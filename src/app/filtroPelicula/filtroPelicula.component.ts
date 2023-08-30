@@ -43,7 +43,8 @@ formularioOriginal={
   ngOnInit() {
 
     this.form = this.formBuilder.group(this.formularioOriginal)
-
+    this.leerValoresUrl()
+    this.buscarPeliculas(this.form.value);
     this.form.valueChanges/*esto sirve para obtener
     los valores de un formulario en tiempo real y poder reaccionar con otra
     accion si asi lo queremos*/
@@ -56,7 +57,29 @@ formularioOriginal={
 
   }
 
-  private leerValoresUrl
+  private leerValoresUrl(){
+    this.activeRoute.queryParams.subscribe((params)=>{
+      var objeto:any={}
+
+      if(params.titulo){
+        objeto.titulo =  params.titulo
+      }
+
+      if(params.generoId){
+        objeto.generoId = Number(params.generoId)
+      }
+
+      if(params.proximosExtrenos){
+        objeto.proximosExtrenos = params.proximosExtrenos
+      }
+
+      if(params.enCines){
+        objeto.enCines = params.enCines
+      }
+
+      this.form.patchValue(objeto)
+    })
+  }
 
 
   private escribirParametrosBusquedaEnUrl(){

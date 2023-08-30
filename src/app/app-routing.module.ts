@@ -19,6 +19,7 @@ const routes: Routes = [
   {path:'generos/editar/:id', component:EditarGeneroComponent},
 
   {path:'actores', component:ActoresComponent},
+  {path:'actores/crear', component:CrearActorComponent},
 
   {path:'cines/crear', component:CrearCinesComponent},
   {path:'cines', component:CinesComponent},
