@@ -13,7 +13,9 @@ export class CrearActorComponent implements OnInit {
   ngOnInit() {
   }
 
-  guardar(actorDto:actorCreacionDto){
-    console.log(actorDto);
+  guardarCambios(actor: actorCreacionDto){
+    console.log(actor);
+
   }
+
 }
