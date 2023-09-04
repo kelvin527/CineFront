@@ -23,6 +23,8 @@ import { CrearActorComponent } from './peliculas/actores/crear-actor/crear-actor
 import { FarmularioActoresComponent } from './peliculas/actores/farmulario-actores/farmulario-actores.component';
 import { EditarActorComponent } from './peliculas/actores/editar-actor/editar-actor.component';
 import { ImagenesComponent } from './utilidades/imagenes/imagenes.component';
+import { InputMarkdaownComponent } from './utilidades/input-markdaown/input-markdaown.component';
+import {MarkdownModule} from 'ngx-markdown'
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { ImagenesComponent } from './utilidades/imagenes/imagenes.component';
     CrearActorComponent,
     FarmularioActoresComponent,
     EditarActorComponent,
-    ImagenesComponent
+    ImagenesComponent,
+    InputMarkdaownComponent
    ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { ImagenesComponent } from './utilidades/imagenes/imagenes.component';
     BrowserAnimationsModule,
     MaterialModule,
     MatToolbarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MarkdownModule.forRoot()
 
   ],
   providers: [],

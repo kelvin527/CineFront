@@ -28,7 +28,8 @@ export class FarmularioActoresComponent implements OnInit {
         },
       ],
       fechaNacimiento: '',
-      foto: ''
+      foto: '',
+      biografia:''
 
     });
 
@@ -41,9 +42,10 @@ export class FarmularioActoresComponent implements OnInit {
     this.form.get('foto').setValue(file);
   }
 
-  cambioMarkdown(texto: string){
+  cambioMarkDown(texto: string){
     this.form.get('biografia').setValue(texto);
   }
+
 
   onSubmit(){
     this.OnSubmit.emit(this.form.value);

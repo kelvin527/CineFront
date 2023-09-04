@@ -14,6 +14,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 
+import {MatTabsModule} from '@angular/material/tabs';/**esto es para trabajar con descripciones o crear tab */
+
+
 
 
 
@@ -31,7 +34,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatSelectModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTabsModule
   ],
   declarations: [
 

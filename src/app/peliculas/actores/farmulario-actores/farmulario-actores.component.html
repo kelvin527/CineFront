@@ -1,6 +1,6 @@
 <form (submit)="onSubmit()" [formGroup]="form">
   <mat-form-field appearance="outline">
-    <mat-label>Nombre*</mat-label>
+    <mat-label>Nombre</mat-label>
     <input formControlName="nombre" matInput />
     <mat-error>El campo Nombre es requerido</mat-error>
   </mat-form-field>
@@ -20,6 +20,8 @@
 
   <!-- <app-input-markdown [placeHolderTextarea]="'Biografía'"
   (changeMarkdown)="cambioMarkdown($event)"></app-input-markdown> -->
+
+  <app-input-markdaown (changeMarkdown2)="cambioMarkDown($event)"></app-input-markdaown>
 
   <div>
     <button mat-flat-button color="primary" [disabled]="form.invalid">

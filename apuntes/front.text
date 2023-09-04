@@ -1,0 +1,6 @@
+ npm i ngx-markdown: esta libreria sirve para mostrar un campo de escritura, como una biografia y
+ cosas asi. Le muestra y le permite al usuario enriqueser el texto
+
+(input): este evento sirve para capturar los eventos desde el html
+
+Markdown:En Angular, Markdown no es un lenguaje en sí mismo, sino más bien un formato de texto que puedes utilizar en tus aplicaciones web para representar contenido formateado de manera más legible y estructurada. Para renderizar contenido Markdown en una aplicación Angular,
