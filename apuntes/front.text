@@ -4,3 +4,7 @@
 (input): este evento sirve para capturar los eventos desde el html
 
 Markdown:En Angular, Markdown no es un lenguaje en sí mismo, sino más bien un formato de texto que puedes utilizar en tus aplicaciones web para representar contenido formateado de manera más legible y estructurada. Para renderizar contenido Markdown en una aplicación Angular,
+
+mapas leaflet:https://github.com/bluehalo/ngx-leaflet este es el repositorio para usar liflet, dentro tiene la documentacmatListIcon
+de como usarlo y instarlo. "/node_modules/leaflet/dist/leaflet.css" este codigo tenemos que ponerlo en el angular.json en la seccion de style para que el mapa tome los estilos
+que le demos

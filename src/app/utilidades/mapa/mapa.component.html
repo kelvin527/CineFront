@@ -1,0 +1,8 @@
+ <!--(leafletClick) esto sirve para cuando se le da clic al mapa, asi nsosotros podemos capturar la latitud y logintud-->
+<div leaflet
+[leafletOptions]="options"
+(leafletClick)="manejarClic($event)"
+[leafletLayers]="capas"
+>
+
+</div>

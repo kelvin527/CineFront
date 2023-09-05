@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { cinesCreacionDto, cinesDto } from '../interface/cines.interface';
 
 @Component({
   selector: 'app-editar-cines',
@@ -10,6 +11,8 @@ export class EditarCinesComponent implements OnInit {
 
   constructor(private activeRoute:ActivatedRoute) { }
 
+  modelo:cinesDto={nombre:'Sambil'}
+
   ngOnInit():void {
     this.activeRoute.params.subscribe(params =>{
       // alert(params.id);
@@ -17,4 +20,7 @@ export class EditarCinesComponent implements OnInit {
 
   }
 
+  guardarCambio(cine:cinesCreacionDto){
+    console.log(cine)
+  }
 }
