@@ -1,0 +1,15 @@
+<form formControlName="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input formControlName="nombre" matInput>
+    <mat-error *ngIf="form.invalid">El campo nombre es requerido</mat-error>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" [disabled]="form.invalid">
+    Guardar
+  </button>
+  <a mat-stroked-button routerLink="/cines">
+    Cancelar
+  </a>
+
+</form>

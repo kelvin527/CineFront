@@ -25,6 +25,7 @@ import { EditarActorComponent } from './peliculas/actores/editar-actor/editar-ac
 import { ImagenesComponent } from './utilidades/imagenes/imagenes.component';
 import { InputMarkdaownComponent } from './utilidades/input-markdaown/input-markdaown.component';
 import {MarkdownModule} from 'ngx-markdown'
+import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {MarkdownModule} from 'ngx-markdown'
     FarmularioActoresComponent,
     EditarActorComponent,
     ImagenesComponent,
-    InputMarkdaownComponent
+    InputMarkdaownComponent,
+    FormularioCineComponent
    ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import {MarkdownModule} from 'ngx-markdown'
     MaterialModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+
 
   ],
   providers: [],
