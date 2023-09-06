@@ -11,7 +11,7 @@ export class EditarCinesComponent implements OnInit {
 
   constructor(private activeRoute:ActivatedRoute) { }
 
-  modelo:cinesDto={nombre:'Sambil'}
+  modelo:cinesDto={nombre:'Sambil', latitud:1,longitud:1}
 
   ngOnInit():void {
     this.activeRoute.params.subscribe(params =>{

@@ -1,7 +1,11 @@
 export interface cinesCreacionDto{
-  nombre:string
+  nombre:string,
+  latitud:number,
+  longitud:number
 }
 
 export interface cinesDto{
-  nombre:string
+  nombre:string,
+  latitud:number,
+  longitud:number
 }

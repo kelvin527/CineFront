@@ -12,6 +12,7 @@ export class FormularioCineComponent implements OnInit {
 
   constructor(private formBuilder:FormBuilder) { }
 
+  coordenadasIniciales:coordenadas[] = [];
   form:FormGroup
   @Input()
   modelo:cinesCreacionDto
@@ -27,6 +28,7 @@ export class FormularioCineComponent implements OnInit {
 
     if(this.modelo !== undefined){
       this.form.patchValue(this.modelo);
+      this.coordenadasIniciales.push({ latitud:this.modelo.latitud, longitud:this.modelo.longitud})//esto recibre las coodenadas iniciales
     }
   }
 

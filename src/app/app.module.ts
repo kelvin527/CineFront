@@ -29,6 +29,8 @@ import {MarkdownModule} from 'ngx-markdown'
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 import { CrearCinesComponent } from './cines/crear-cines/crear-cines.component';
 import { MapaComponent } from './utilidades/mapa/mapa.component';
+import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
+import { CrearPeliculaComponent } from './crear-pelicula/crear-pelicula.component';
 
 
 @NgModule({
@@ -52,7 +54,10 @@ import { MapaComponent } from './utilidades/mapa/mapa.component';
     ImagenesComponent,
     InputMarkdaownComponent,
     FormularioCineComponent,
-    CrearCinesComponent,MapaComponent
+    CrearCinesComponent,
+    MapaComponent,
+    FormularioPeliculaComponent,
+    CrearPeliculaComponent
    ],
   imports: [
     BrowserModule,

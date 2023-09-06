@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-markdaown',
@@ -12,6 +12,9 @@ export class InputMarkdaownComponent implements OnInit {
 
     @Output()
     changeMarkdown2:EventEmitter<string> = new EventEmitter<string>()
+
+    @Input()
+    placeHolderTextArea:string = 'Texto';
   constructor() { }
 
   ngOnInit() {
