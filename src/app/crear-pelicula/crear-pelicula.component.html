@@ -1,4 +1,2 @@
-<h2> Peliculas</h2>
-<button mat-flat-button color="primary" routerLink="/peliculas/crear">
-  Crear nuevo
-</button>
+<h2> Crear peliculas</h2>
+<app-formulario-pelicula (OnSubmit)="guardarCambios($event)"></app-formulario-pelicula>

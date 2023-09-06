@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { LeafletMouseEvent, Marker, icon, latLng, marker, tileLayer } from 'leaflet';
 import { coordenadas } from './coordenada.interface';
+import { cinesDto } from 'src/app/cines/interface/cines.interface';
 
 @Component({
   selector: 'app-mapa',
@@ -14,7 +15,13 @@ export class MapaComponent implements OnInit {
   @Output()
   coordenadaSeleccionada:EventEmitter<coordenadas> =  new EventEmitter<coordenadas>();
 
-  ngOnInit() {}
+  @Input()
+  coordenadasIniciales:coordenadas[] = [];
+
+  ngOnInit() {
+    //esto es para mostrar un lugar inicial predeterminado
+    this.capas = this.coordenadasIniciales.map(valor => marker([valor.latitud,valor.longitud]))
+  }
 
   options = {
     layers: [
@@ -30,17 +37,17 @@ export class MapaComponent implements OnInit {
     console.log(latitud,longitud)
 
     this.capas = []
-    this.capas.push(marker([latitud,longitud]))
-
-    this.coordenadaSeleccionada.emit({longitud:longitud,latitud:latitud},{
+    this.capas.push(marker([latitud,longitud],{
       icon:icon({
-        iconSize:[25,41],
-        iconAnchor:[13,41],
-        iconUrl:'marker-icon.png',
-        iconRetinaUrl:'marker-icon-2x.px',
+        iconSize:[25,41],//tamano del icono y esto es el tamano estandar
+        iconAnchor:[13,41],//donde va a salir el icon cuando el usuario haga clic
+        iconUrl:'marker-icon.png',//referencia al icono de leaflet que esta en el nodemodule
+        iconRetinaUrl:'marker-icon-2x.px',//para uso en movil
         shadowUrl:'assets/marker-shadow.png'
       })
-    })
+    }))
+
+    this.coordenadaSeleccionada.emit({longitud:longitud,latitud:latitud})
   }
 }
 
