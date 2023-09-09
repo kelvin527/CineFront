@@ -1,9 +1,9 @@
 <form [formGroup]="form" (submit)="guardarCambios()">
-<mat-form-field appearance="outline">
-  <mat-label>titulo</mat-label>
-  <input formControlName="titulo" matInput>
-  <mat-error > El campo titulo es requerido</mat-error>
-</mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>titulo</mat-label>
+    <input formControlName="titulo" matInput>
+    <mat-error> El campo titulo es requerido</mat-error>
+  </mat-form-field>
 
   <div class="contenedor-checbox">
     <mat-checkbox formControlName="enCines"> En cines</mat-checkbox>
@@ -22,10 +22,14 @@
   </mat-form-field>
 
   <h4>Seleccionar Poster</h4>
-  <app-imagenes></app-imagenes>
+  <app-imagenes (seleccionarArchivo)="seleccionarArchivo($event)"></app-imagenes>
 
   <H4>Resumen de la Pelicula</H4>
-  <app-input-markdaown [placeHolderTextArea]="'Resumen'"></app-input-markdaown>
+  <app-input-markdaown (changeMarkdown2)="changeMarkdown2($event)"
+    [placeHolderTextArea]="'Resumen'"></app-input-markdaown>
+
+    <h2>Seleccione los Generos</h2>
+    <app-selector-multiple></app-selector-multiple>
 
   <div>
     <button mat-flat-button color="primary" [disabled]="form.valid">

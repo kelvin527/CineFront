@@ -20,11 +20,17 @@ export class InputMarkdaownComponent implements OnInit {
   ngOnInit() {
   }
 
-  inputTextArea(evento:any){
+  // inputTextArea(evento:any){
+  //   const texto = evento.target.value;
+  //   this.contenidoMarkDown = texto
+
+  //   console.log(texto)
+  // }
+  onChangeMarkdown(evento):void{
     const texto = evento.target.value;
-    this.contenidoMarkDown = texto
-    this.changeMarkdown.emit(texto)
-    console.log(texto)
+    this.contenidoMarkDown = texto;
+    this.changeMarkdown.emit(texto);
+
   }
 
 }

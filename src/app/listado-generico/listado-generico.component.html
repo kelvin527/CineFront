@@ -3,11 +3,11 @@
 
 </div>
 <div *ngIf="listado?.length ===0">
-<p>   No hay pelicula para mostrar</p>
+  <p> No hay pelicula para mostrar</p>
 </div>
 
 <ng-container *ngIf="listado && listado.length > 0">
-<ng-content select="[contenido]"></ng-content>
+  <ng-content select="[contenido]"></ng-content>
 
 
 </ng-container>

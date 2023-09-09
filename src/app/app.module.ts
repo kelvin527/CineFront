@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +31,8 @@ import { CrearCinesComponent } from './cines/crear-cines/crear-cines.component';
 import { MapaComponent } from './utilidades/mapa/mapa.component';
 import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
 import { CrearPeliculaComponent } from './crear-pelicula/crear-pelicula.component';
+import { EdiatrPeliculaComponent } from './peliculas/ediatr-pelicula/ediatr-pelicula.component';
+import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { CrearPeliculaComponent } from './crear-pelicula/crear-pelicula.componen
     CrearCinesComponent,
     MapaComponent,
     FormularioPeliculaComponent,
-    CrearPeliculaComponent
+    CrearPeliculaComponent,
+    EdiatrPeliculaComponent,
+    SelectorMultipleComponent
    ],
   imports: [
     BrowserModule,
@@ -67,7 +71,8 @@ import { CrearPeliculaComponent } from './crear-pelicula/crear-pelicula.componen
     MatToolbarModule,
     ReactiveFormsModule,
     MarkdownModule.forRoot(),
-    LeafletModule
+    LeafletModule,
+    FormsModule//sirve para trabajar con informacion de doble via
 
   ],
   providers: [],

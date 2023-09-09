@@ -3,5 +3,14 @@ export interface PeliculaCreacionDto{
   resumen:string,
   enCines:boolean,
   trailer:string,
-  poster:string
+  fechaLanzamiento:Date
+  poster:File
+}
+export interface PeliculaDto{
+  titulo:string,
+  resumen:string,
+  enCines:boolean,
+  trailer:string,
+  poster:string,
+  fechaLanzamiento:Date
 }

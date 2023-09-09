@@ -27,8 +27,8 @@ export class MapaComponent implements OnInit {
     layers: [
       tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' })
     ],
-    zoom: 5,
-    center: latLng(46.879966, -121.726909)
+    zoom: 14,
+    center: latLng(18.423781613767005, -70.1169240474701)
   };
   capas:Marker<any>[] = []//esto se usa para poder marcar algo en el mapa
   manejarClic(event:LeafletMouseEvent){
