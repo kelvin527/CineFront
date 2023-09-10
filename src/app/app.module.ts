@@ -33,6 +33,7 @@ import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/for
 import { CrearPeliculaComponent } from './crear-pelicula/crear-pelicula.component';
 import { EdiatrPeliculaComponent } from './peliculas/ediatr-pelicula/ediatr-pelicula.component';
 import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
+import { AutocompleteActoresComponent } from './peliculas/actores/autocomplete-actores/autocomplete-actores.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { SelectorMultipleComponent } from './utilidades/selector-multiple/select
     FormularioPeliculaComponent,
     CrearPeliculaComponent,
     EdiatrPeliculaComponent,
-    SelectorMultipleComponent
+    SelectorMultipleComponent,
+    AutocompleteActoresComponent
    ],
   imports: [
     BrowserModule,
