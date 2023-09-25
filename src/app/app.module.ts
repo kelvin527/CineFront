@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet'
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -74,8 +76,8 @@ import { AutocompleteActoresComponent } from './peliculas/actores/autocomplete-a
     ReactiveFormsModule,
     MarkdownModule.forRoot(),
     LeafletModule,
-    FormsModule//sirve para trabajar con informacion de doble via
-
+    FormsModule,//sirve para trabajar con informacion de doble via
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
